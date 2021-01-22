@@ -39,9 +39,7 @@ const App: React.FC = () => {
       </Navbar.Collapse>
     </Navbar>
     <div style={{ height: "50px" }} />
-    <div className="container">
       {content()}
-    </div>
     <div style={{ height: "50px" }} />
     <div className='footer'>
       2021

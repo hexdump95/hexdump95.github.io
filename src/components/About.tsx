@@ -10,8 +10,9 @@ const About: React.FC = () => {
     };
 
     return (
-        <div style={style}>
-            <p>Sergio Villanueva!</p>
+        <div style={style} >
+            <h2>Hi, I{'\''}m Sergio Villanueva</h2>
+            <h6 style={{ textAlign: 'center' }}>A backend developer</h6>
         </div>
     );
 };
