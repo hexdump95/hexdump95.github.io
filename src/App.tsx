@@ -38,13 +38,13 @@ const App: React.FC = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    <div className="container adjust">
+    <div style={{ height: "50px" }} />
+    <div className="container">
       {content()}
     </div>
+    <div style={{ height: "50px" }} />
     <div className='footer'>
-      <div className='container'>
-        2021
-      </div>
+      2021
     </div>
   </div>);
 };

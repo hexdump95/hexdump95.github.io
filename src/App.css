@@ -12,10 +12,6 @@
 }
 
 body {
-    font-family: 'IBM Plex Mono', monospace;
+    /* font-family: 'IBM Plex Mono', monospace; */
     background: linear-gradient(45deg, #faffff, #fffffa);
-}
-
-.adjust {
-    transform: translateY(50px);
 }
