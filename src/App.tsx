@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App: React.FC = () => {
+  const [page, setPage] = useState('');
+
+  const goToPage = (page: string) => (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.preventDefault();
+    setPage(page);
+  };
+
+  const content = () => {
+    if (page === '') {
+      return <About />;
+    } else if (page === 'portfolio') {
+      return <Portfolio />;
+    } else if (page === 'contact') {
+      return <Contact />;
+    }
+  };
+
+  return (<div>
+    <Navbar bg="dark" variant="dark" >
+      <Navbar.Brand href="">Sergio Villanueva</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ml-auto">
+          <Nav.Link href="" active={page === ''} onClick={goToPage('')}>About</Nav.Link>
+          <Nav.Link href="" active={page === 'portfolio'} onClick={goToPage('portfolio')}>Portfolio</Nav.Link>
+          <Nav.Link href="" active={page === 'contact'} onClick={goToPage('contact')}>Contact</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+    <div className="container">
+      {content()}
     </div>
-  );
-}
+
+  </div>);
+};
 
 export default App;
