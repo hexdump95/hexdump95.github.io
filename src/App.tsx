@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import './App.css';
 
 const App: React.FC = () => {
   const [page, setPage] = useState('');
@@ -25,8 +26,9 @@ const App: React.FC = () => {
   };
 
   return (<div>
-    <Navbar bg="dark" variant="dark" >
-      <Navbar.Brand href="">Sergio Villanueva</Navbar.Brand>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand href="">
+        <img src='https://avatars.githubusercontent.com/u/65696419' className='image' />  Sergio Villanueva</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
@@ -36,10 +38,14 @@ const App: React.FC = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    <div className="container">
+    <div className="container adjust">
       {content()}
     </div>
-
+    <div className='footer'>
+      <div className='container'>
+        2021
+      </div>
+    </div>
   </div>);
 };
 
