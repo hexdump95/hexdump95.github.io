@@ -1,7 +1,14 @@
 import React from 'react';
 
+interface Repo {
+    name: string;
+    description: string;
+    language: string;
+    using: string[];
+}
+
 const Portfolio: React.FC = () => {
-    const repos = [
+    const repos: Repo[] = [
         {
             name: 'hexdump95.github.io',
             description: 'This website!',
@@ -16,19 +23,19 @@ const Portfolio: React.FC = () => {
         },
         {
             name: 'mongodb-demo',
-            description: 'An unfinished project, it is supposed to be a REST API of a library. Travis-CI is used to deploy the app to Heroku.',
+            description: 'An unfinished project, it is supposed to be a REST API of a library. Travis-CI is used to deploy the app on Heroku.',
             language: 'Java',
             using: ['Spring Webflux', 'Swagger', 'MongoDB', 'Travis-CI', 'Heroku']
         },
         {
             name: 'ng-mongodb-demo',
-            description: 'The frontend for the mongodb-demo project.',
+            description: 'mongodb-demo frontend.',
             language: 'TypeScript',
             using: ['Angular', 'Bootstrap']
         },
         {
             name: 'microservice-customer',
-            description: 'A microservice which has customer info, it\'s supposed to be a part of an e-commerce site.',
+            description: 'A microservice which has customer info, it\'s supposed to be a part of an shopping app.',
             language: 'Java',
             using: [' Spring Boot', 'JPA', 'PostgreSQL', 'Swagger', 'Travis-CI', 'Docker', 'Docker-compose']
         },
@@ -46,14 +53,14 @@ const Portfolio: React.FC = () => {
         }
     ];
 
-    const spaceBetween: React.CSSProperties = { height: '20px' };
+    const style: React.CSSProperties = { height: '20px' };
 
     return (
         <div className="container">
             {repos.map(repo =>
                 <div key={repo.name} >
                     <div style={{ backgroundColor: 'white', borderStyle: 'dotted', borderColor: 'black' }}>
-                        <div style={spaceBetween}> </div>
+                        <div style={style}> </div>
                         <div className="container" style={{ wordWrap: 'break-word' }}>
                             <h3>hexdump95/<a href={`https://github.com/hexdump95/${repo.name}`}>{repo.name}</a></h3>
                             <h5>{repo.description}</h5>
@@ -61,7 +68,7 @@ const Portfolio: React.FC = () => {
                             <p style={{ color: "grey", fontSize: 14 }}>{repo.using.map((u, i) => i >= (repo.using.length - 1) ? u : `${u}, `)}</p>
                         </div>
                     </div>
-                    <div style={spaceBetween}> </div>
+                    <div style={style}> </div>
                 </div>
             )
             }
