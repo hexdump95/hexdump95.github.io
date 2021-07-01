@@ -1,0 +1,54 @@
+<html>
+
+<head>
+	<title>Sergio Villanueva</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./index.js" defer></script>
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+	<nav>
+		<div class="name"><span>Sergio Villanueva</span></div>
+		<div style="height: 60px;"></div>
+		<div class="space"></div>
+		<div id="links">
+			<a href="#about" onclick="toggleLinks()">
+				<div class="link">About</div>
+			</a>
+			<a href="#portfolio" onclick="toggleLinks()">
+				<div class="link">Portfolio</div>
+			</a>
+			<a href="#contact" onclick="toggleLinks()">
+				<div class="link">Contact</div>
+			</a>
+		</div>
+		<div class="hamburger" onclick="toggleLinks()">&#9776;</div>
+	</nav>
+
+	<div class="about container" id="about">
+		<div style="height: 60px;"></div>
+		<div class="avatar-box">
+			<div class="space"></div>
+			<img id="avatar" />
+			<div class="space"></div>
+		</div>
+		<h1>Hi, I'm Sergio Villanueva</h1>
+	</div>
+	<div></div>
+	<div class="container" id="portfolio">
+		<div style="height: 60px;"></div>
+		<div class="repos"></div>
+	</div>
+</body>
+<footer id="contact">
+	<div class="space"></div>
+	<a href="https://github.com/hexdump95/"><img src="img/github.png" class="contact"></img></a>
+	<div class="space"></div>
+	<a href="https://linkedin.com/in/sergiovillanueva95"><img src="img/linkedin.png" class="contact"></img></a>
+	<div class="space"></div>
+</footer>
+
+</html>

@@ -1,0 +1,149 @@
+.space {
+    flex: 2;
+}
+
+nav {
+    position: fixed;
+    inset: 0 0 0;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 0px 13px #000000;
+    font-family: 'IBM Plex Mono';
+    height: 60px;
+}
+
+#links, .hamburger, .name {
+    line-height: 60px;
+}
+
+.hamburger {
+    display: none;
+    right: 0;
+    width: 60px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.link {
+    background-color: white;
+    width: 100px;
+}
+
+.link:hover {
+    background-color: rgb(215, 253, 241);
+}
+
+.link:active {
+    background-color: rgb(53, 255, 191);
+}
+
+nav span {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body {
+    background: #f5ffff;
+    text-align: center;
+    margin: 0;
+}
+
+.about {
+    background: 
+        linear-gradient(180deg, #e5ffff, rgba(0, 0, 0, 0) 50%),
+        linear-gradient(135deg, #a5ffff, rgba(0, 0, 0, 0) 20%),
+        linear-gradient(225deg, #65ffff, rgba(0, 0, 0, 0) 20%),
+        linear-gradient(0deg, #f5ffff, rgba(0, 0, 0, 0) 100%);
+    margin-top: 60px;
+    padding: 80px;
+}
+
+.about h1 {
+    display: block;
+}
+
+.avatar-box {
+    display: flex;
+}
+
+#avatar {
+    max-width: 25%;
+    border-radius: 100%;
+    flex: 1;
+}
+
+.container {
+    padding: 10px;
+    font-family: Ubuntu;
+}
+
+footer {
+    bottom: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 13px #000000;
+    border-radius: 45px 45px 0px 0px;
+    display: flex;
+    place-items: center;
+    height: 300px;
+}
+
+.contact {
+    width: 120px;
+    height: 120px;
+    filter: invert(0) opacity(80%);
+    transition: filter 5s;
+}
+
+.contact:hover {
+    filter: invert(100%) opacity(80%);
+    transition: filter 5s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    background-color: white;
+    border: 2px dotted black;
+    margin: 70px;
+    word-wrap: break-word;
+}
+
+.card:hover {
+    background-color: rgb(215, 253, 241);
+    border: inherit solid black;
+}
+
+.card:active {
+    background-color: rgb(53, 255, 191);
+    border: inherit solid black;
+}
+
+@media screen and (max-width:650px) {
+    #links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        box-shadow: 0 15px 20px -10px #000;
+    }
+    .hamburger {
+        display: block;
+    }
+    .link {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 90%);
+    }
+    #avatar {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width:651px) {
+    #links {
+        display: flex !important;
+    }
+}
