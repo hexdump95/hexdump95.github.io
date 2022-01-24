@@ -89,8 +89,9 @@ footer {
 }
 
 .contact {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    display: block;
     filter: invert(0) opacity(80%);
     transition: filter 5s;
 }
